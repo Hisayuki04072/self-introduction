@@ -1,0 +1,153 @@
+.header-nav{
+    height: 60px;
+    background-color: #000;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav {
+    margin-right: 5%;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover {
+    color: #f00;
+  }
+
+  #first-block {
+    background-image:"homepage\\images\\ad66fa12-34c6-5db2-8e65-8aa158c80a89.jpeg";
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    background-color: #ddd;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-container {
+    text-align:center;
+  }
+
+  h1{
+    font-size: 80px;
+    font-family: serif;
+    color: #444;
+  }
+
+  h3 {
+    font-size: 50px;
+    font-family: serif;
+    color: #444;
+  }
+
+  #second-block {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .info-title {
+    font-size: 60px;
+    font-family: serif;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+  }
+
+  .info-text{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #444;
+    width: 30%;
+    text-align: left;
+  }
+
+  .font-samll {
+    font-size: 15px;
+  }
+
+  #third-block {
+    background-color: #f05f40;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .history-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .history-title {
+    font-size: 60px;
+    font-family: serif;
+    color: #444;
+  }
+
+  .event{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .club-name{ 
+    font-size: 20px;
+    padding: 10px;
+    width: 40%;
+  }
+
+  span {
+    font-size: 40px;
+    font-family: serif;
+  }
+
+  .club-image {
+    width: 50%;
+    height: 120%;
+  }
+
+  footer{
+    display: flex;
+    justify-content: center;/*テキストを真ん中に表示するための仕組み*/
+    align-items: center;
+
+    height: 50px;
+    background-color: #000;
+    font-size: 15px;
+    color: #fff;
+  }
+  
+
+  @media (max-width: 768px) {/*スクリーンの小さいデバイスでも表示できるようにする*/
+    .header-nav {
+      flex-direction: column; /* 小さいスクリーンでは縦並び */
+    }
+    nav {
+      margin-right: 0; /* 小さい画面では余白を取り除く */
+    }
+  }
