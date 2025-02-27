@@ -2,13 +2,49 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>indexのサイト</title>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>音楽のオン・オフ</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="homepage\\images\\websiteplanet.com-favicons\\favicons\\favicon-16x16.png">
     </head>
     <body>
         <div>
-            最初のページ
             <br>
-            github pagesの動作確認
+            音楽を再生しますか？
+        </div>
+        <div>
+            <label><!--labelタグとは-->
+                <input type="radio" name="music" value="on" checked>on
+            </label>
+            <label>
+                <input type="radio" name="music" value="off">off
+            </label>
+            <br>
+            <br>
+            <button onclick="nextPage()">ホームページへ</button>
+            <audio id="bgm" src = "homepage\\music\\Good_Evening_Sunset.mp3" loop></audio>
+            <script>
+                function nextPage() {
+                    const musicChoice = document.querySelector("input[name='music']:checked")
+                    console.log(musicChoice);
+                    const audio = document.getElementById("bgm")
+                    
+                    if (musicChoice.value === "on"){
+                        console.log("play");
+                        //audio.play();//デバック用
+                        localStorage.setItem("musicPlaying", "true");
+                    } else {
+                        console.log("not play");
+                        audio.pause();
+                        audio.currnetTime = 0;
+                        localStorage.setItem("musicPlaying", "false");
+                    }
+                    console.log("played");
+                    setTimeout(() => {
+                        window.location.href = "homepage.html";
+                    }, 1000)
+                }
+            </script>
+            
         </div>
     </body>
 </html>

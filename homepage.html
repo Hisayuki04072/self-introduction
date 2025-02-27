@@ -3,14 +3,15 @@
 <html lang="ja">
  <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width-device-width", initial-scale="1.0" >
+   <meta name="viewport" content="width=device-width", initial-scale="1.0" >
    <meta name="author" content="陸奥田久之">
    <title>self_introduction</title>
    <link rel="stylesheet" href="homepage/stylesheets/stylesheets.css"></link>
+   <link rel="icon" type="image/png" sizes="16x16" href="homepage\images\websiteplanet.com-favicons\favicons\favicon-16x16.png">
  </head>
  <body>
     <header class="header-nav">
-        <audio src="homepage\\music\\Good_Evening_Sunset.mp3" type="audio/mp3" controls autoplay loop></audio>
+        <audio id="bgm" src="homepage\\music\\Good_Evening_Sunset.mp3" type="audio/mp3" autoplay muted loop></audio>
         <nav><a href="#first-block">Home</a></nav><!--aはリンクをはる、リンクの出発到着点-->
         <nav><a href="#second-block">About me</a></nav>
         <nav><a href="#third-block">History</a></nav>
@@ -104,7 +105,43 @@
         </div>
     </section>
   <!--  コンテンツはここまで  -->
-  
+    <script>
+    window.addEventListener("load", function() {
+        const audio =document.getElementById("bgm");
+        const musicPlaying = localStorage.getItem("musicPlaying");
+        console.log(audio);
+        console.log(musicPlaying);
+        audio.volume = 0.3;
+        /*
+        if (musicPlaying === "true"){
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const source = audioContext.createMediaElementSource(audio);
+            const gainNode = audioContext.createGain();
+            source.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            gainNode.gain.value=0.5;
+        */
+        
+        if (musicPlaying === "true"){
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("成功"), 2000);//読み込みの長さによって
+            });
+            promise.then(result =>{
+                audio.muted = false;
+                audio.play();
+            });
+        
+        /*
+        if (musicPlaying === "true"){
+            audio.muted = false;
+            audio.play();
+        */
+        } else {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    });
+    </script>
     <footer>
         <small>&copy; 2024 mutsuda ALL Rights Reserved.</small>	
     </footer>
