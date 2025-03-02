@@ -8,6 +8,7 @@
    <title>self_introduction</title>
    <link rel="stylesheet" href="homepage/stylesheets/stylesheets.css"></link>
    <link rel="icon" type="image/png" sizes="16x16" href="homepage\images\websiteplanet.com-favicons\favicons\favicon-16x16.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
  </head>
  <body>
     <header class="header-nav">
@@ -25,8 +26,8 @@
             <h3>陸奥田 久之</h3>
         </div>
     </section>
-    <section id="midle-block">
-        <marquee color="green">ここに記述した文字列が表示され、左へ移動します。</marquee>
+    <section id="marquee">
+        <span>インスタグラム、メールアドレスは一番下に載せてます</span>
     </section>
     <section id="second-block">
         <p class="info-title">
@@ -63,7 +64,7 @@
                 <b>東京理科大学創域理工学部情報計算科学科4年</b>
                 <br>
                 
-                &#12288; 将来はAIエンジニアとし画像、音声領域のAI開発に
+                &#12288; 将来はAIエンジニアとして画像、音声領域のAI開発に
                 <br>
                 &#12288; 携わりたいと思っています
                 
@@ -73,7 +74,7 @@
             <p class="info-text2">
                 githubのリンクです
                 <br>
-                <a href="https://github.com/Hisayuki04072" style="color:blue">https://github.com/Hisayuki04072</a>
+                <a href="https://github.com/Hisayuki04072" style="color:blue" target="_blank">https://github.com/Hisayuki04072</a>
             </p>
         </div>
     </section>
@@ -97,7 +98,7 @@
                 </p>
             </div>
             <div class="event">
-                <img src="homepage/images/OIP.jpg" alt="画像が表示されません "class="club-image">
+                <img src="homepage/images/OIP.jpg" alt="画像が表示されません" class="club-image">
                 <p class="club-name">
                     <span>中学:陸上部</span>
                     <br>
@@ -147,7 +148,15 @@
     });
     </script>
     <footer>
-        <small>&copy; 2024 mutsuda ALL Rights Reserved.</small>	
+        <div id="footer-container">
+            <a id="instagram" href="https://www.instagram.com/mutsud0407/" target="_blank" alt="画像がありません">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+            <a id="mail" href="mailto:hisayukimutsuda58@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <small>&copy; 2024 mutsuda ALL Rights Reserved.</small>
+        </div>	
     </footer>
   </body>
 </html>
