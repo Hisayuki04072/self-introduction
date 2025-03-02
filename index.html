@@ -6,7 +6,7 @@
         <title>音楽のオン・オフ</title>
         <link rel="icon" type="image/png" sizes="16x16" href="homepage\\images\\websiteplanet.com-favicons\\favicons\\favicon-16x16.png">
     </head>
-    <body>
+    <body data-barba="wrappper">
         <div>
             <br>
             音楽を再生しますか？
@@ -22,6 +22,7 @@
             <br>
             <button onclick="nextPage()">ホームページへ</button>
             <audio id="bgm" src = "homepage\\music\\Good_Evening_Sunset.mp3" loop></audio>
+            
             <script>
                 function nextPage() {
                     const musicChoice = document.querySelector("input[name='music']:checked")
@@ -44,7 +45,17 @@
                     }, 1000)
                 }
             </script>
-            
+            <!--
+            <script>
+                const music = new Howl({
+                    src: "homepage\\music\\Good_Evening_Sunset.mp3",
+                    autoplay: true,
+                    volume: 0.5,
+                    loop: true,
+                });
+                music.play()
+            </script>
+            -->
         </div>
     </body>
 </html>
